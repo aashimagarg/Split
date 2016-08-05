@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.aashimagarg.eventdistribute.VenmoActivity"
+    tools:showIn="@layout/activity_venmo">
+
+    <EditText
+        android:id="@+id/et_venmo_contribution"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:ems="10"
+        android:hint="@string/_0"
+        android:textColorHint="@color/black"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <Button
+        android:id="@+id/btn_venmo_contribute"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="250dp"
+        android:text="@string/pay"
+        android:onClick="onVenmoContribute"
+        android:background="@color/venmo_primary"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/et_venmo_host"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/et_venmo_contribution"
+        android:layout_toLeftOf="@+id/et_venmo_contribution"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColorHint="@color/venmo_hint"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

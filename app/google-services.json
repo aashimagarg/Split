@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "914846952793",
+    "firebase_url": "https://eventribute.firebaseio.com",
+    "project_id": "eventribute",
+    "storage_bucket": "eventribute.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914846952793:android:11d533495f69be87",
+        "android_client_info": {
+          "package_name": "com.example.aashimagarg.eventdistribute"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914846952793-k5a31qqqev2anajsbotkc9pd2a99bp22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv0QJvIvUplvac8JIKZPohq_Mz3slao2A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

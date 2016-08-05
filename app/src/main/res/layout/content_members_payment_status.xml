@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.aashimagarg.eventdistribute.MembersPaymentStatusActivity"
+    tools:showIn="@layout/activity_members_payment_status">
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/ts_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:textColor="?attr/colorPrimary"
+        app:pstsIndicatorColor="?attr/colorPrimary"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="true"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ts_tabs"/>
+
+</RelativeLayout>

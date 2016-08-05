@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/ll_total"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_details"
+        android:layout_height="wrap_content"
+        tools:context="com.example.aashimagarg.eventdistribute.EventDetailsActivity"
+        tools:showIn="@layout/activity_event_details">
+
+        <ImageView
+            android:id="@+id/iv_cover_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@color/com_facebook_blue"
+            android:foregroundTint="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="35sp"
+            android:text="@string/event_title"
+            android:padding="10dp"
+            style="@style/titleText" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_below="@+id/tv_start_time"
+            android:layout_alignLeft="@+id/tv_start_time"
+            android:layout_alignStart="@+id/tv_start_time"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Location"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            style="@style/titleText" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_location"
+            android:layout_alignLeft="@+id/tv_location"
+            android:layout_alignStart="@+id/tv_location"
+            android:maxLength="175"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:text="@string/description"
+            android:textSize="14dp"
+            style="@style/titleText" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_alignLeft="@+id/tv_title"
+            android:layout_alignStart="@+id/tv_title"
+            android:text="@string/start_time"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            style="@style/titleText" />
+
+        <Button
+            android:id="@+id/btn_contribute"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/et_contribution_amount"
+            android:layout_alignLeft="@+id/pb_contribution_progress"
+            android:layout_alignStart="@+id/pb_contribution_progress"
+            android:layout_marginLeft="33dp"
+            android:layout_marginBottom="7dp"
+            android:onClick="onContribute"
+            android:textSize="18sp"
+            android:background="@drawable/venmo_icon"
+            android:shadowColor="@color/grey"
+            android:shadowRadius="5" />
+
+        <TextView
+            android:id="@+id/et_contribution_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_amount_needed"
+            android:layout_alignRight="@+id/pb_contribution_progress"
+            android:layout_alignEnd="@+id/pb_contribution_progress"
+            android:layout_marginRight="33dp"
+            android:textSize="14sp"
+            android:hint="@string/contribute_amount"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_amount_needed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pb_contribution_progress"
+            android:layout_marginBottom="3dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/amount_needed"
+            android:padding="5dp"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/pb_contribution_progress"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cover_photo"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:padding="2dp"
+            android:indeterminate="false"
+            style="?android:attr/progressBarStyleHorizontal" />
+
+        <TextView
+            android:id="@+id/tv_paid_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_description"
+            android:layout_alignLeft="@+id/tv_description"
+            android:layout_alignStart="@+id/tv_description"
+            android:maxLength="175"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:textSize="14dp"
+            style="@style/titleText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_paid_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/ts_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white"
+        android:textColor="?attr/colorPrimary"
+        android:fillViewport="false"
+        app:pstsIndicatorColor="?attr/colorPrimary"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="true" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_paid_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ts_tabs" />
+
+    </RelativeLayout>
+
+</LinearLayout>

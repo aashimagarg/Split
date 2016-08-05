@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aashimagarg.eventdistribute">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".LogInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".timeline.TimelineActivity"
+            android:label="@string/title_activity_timeline" />
+        <activity
+            android:name=".create.CreateActivity"
+            android:label="@string/title_activity_create" />
+        <activity
+            android:name=".EventDetailsActivity"
+            android:label="@string/title_activity_event_details" />
+        <activity
+            android:name=".create.InviteActivity"
+            android:label="@string/title_activity_invite" />
+        <activity
+            android:name=".MembersPaymentStatusActivity"
+            android:label="@string/title_activity_members_payment_status" />
+        <activity
+            android:name=".VenmoActivity"
+            android:label="@string/title_activity_venmo"
+            android:windowSoftInputMode="stateVisible"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

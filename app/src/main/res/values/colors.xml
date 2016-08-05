@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5C6BC0</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#5C6BC0</color>
+    <color name="title_color">#060606</color>
+    <color name="black">#060606</color>
+    <color name="venmo_hint">#54abd7</color>
+    <color name="venmo_primary">#3D95CE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#878787</color>
+    <color name="description_background_color">#000000</color>
+    <color name="error">#D32F2F</color>
+</resources>
