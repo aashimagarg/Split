@@ -1,10 +1,8 @@
 package com.example.aashimagarg.eventdistribute;
 
-import com.google.firebase.database.IgnoreExtraProperties;
 import java.util.HashMap;
 import java.util.Map;
 
-@IgnoreExtraProperties
 public class User {
     private String uid;
     private String name;
